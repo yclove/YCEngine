@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center_vertical"
+    android:id="@+id/mRootLayout"
+    android:orientation="horizontal"
+    android:paddingBottom="0dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="0dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNotifyTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="07:00"
+            android:textColor="#333333"
+            android:textSize="36dp"/>
+
+        <TextView
+            android:id="@+id/tvNotifyName"
+            style="@style/subTitleStyle"
+            android:text="알람 제목"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.ycengine.yclibrary.widget.UntouchableSeekBar
+            android:id="@+id/mSeekBar"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:progress="15"
+            android:max="15"
+            android:progressDrawable="@drawable/seekbar_player_volume"
+            android:thumb="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/tvNotifyDay"
+            style="@style/subTitleStyle"
+            android:text="일 월 화 수 목 금 토"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="match_parent"/>
+
+    <Switch
+        android:id="@+id/mEnabledSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumb="@drawable/switch_thumb_selector"
+        android:track="@drawable/switch_track_selector"/>
+
+</LinearLayout>

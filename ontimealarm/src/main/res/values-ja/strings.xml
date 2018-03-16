@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">オンタイム通知</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~2150652011</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/3158102613</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/6954587839</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/3530471853</string>
+
+    <string name="title_setting">アラーム設定</string>
+
+    <string name="hint_noti_title">アラーム名を入力してください。</string>
+
+    <string name="msg_choice_noti_type">アラーム音や振動を選択してください。</string>
+    <string name="msg_choice_noti_hour">1つ以上のアラーム時刻を選択してください。</string>
+    <string name="msg_choice_noti_day">1日以上を選択してください。</string>
+    <string name="msg_delete_noti_confirm">このアラームを削除してもよろしいですか？</string>
+
+    <string name="repeat_day">繰り返し日</string>
+    <string name="alarm_setting_time">アラーム時刻の設定</string>
+    <string name="status_bar_notify">ステータスバーの通知</string>
+    <string name="sound">アラーム音</string>
+    <string name="vibrate">振動</string>
+    <string name="noti_name">アラーム名</string>
+
+    <string name="alarm_set_for">今から%1$sアラームが設定されています。</string>
+
+</resources>

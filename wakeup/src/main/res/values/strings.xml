@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="app_name">WakeUp</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~5419927158</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/3444500508</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/2103498670</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/7599846868</string>
+
+    <string name="title_setting">Alarm setting</string>
+
+    <string name="hint_noti_title">Please enter an alarm name.</string>
+
+    <string name="msg_choice_noti_type">Please select alarm sound or vibration.</string>
+    <string name="msg_delete_noti_confirm">Are you sure you want to delete this alarm?</string>
+    <string name="msg_already_pass_time">You can not select past time.</string>
+    <string name="msg_not_answer">This is a wrong answer. Please recalculate.</string>
+    <string name="msg_find_hidden_icons">Please find hidden icons.</string>
+
+    <string name="game_mission">Alarm cancellation mission</string>
+    <string name="game_non">Touch</string>
+    <string name="game_calculation">Calculation</string>
+    <string name="game_calculation_simple">Add / Sub</string>
+    <string name="game_puzzle">Picture puzzle</string>
+    <string name="game_finish">Cancel an alarm</string>
+
+    <string name="repeat_day">Repeat day</string>
+    <string name="sound">Alarm sound</string>
+    <string name="vibrate">Vibration</string>
+    <string name="noti_name">Alarm Name</string>
+
+    <string name="alarm_set_for">Alarm set for %1$s from now.</string>
+
+</resources>

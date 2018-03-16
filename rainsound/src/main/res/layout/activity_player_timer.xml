@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rootLayout"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerTimerActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000"/>
+
+    <View
+        android:id="@+id/vStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/vStatusBar"
+        android:background="#4D000000">
+
+        <ImageButton
+            android:id="@+id/mCloseBtn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:onClick="onClick"
+            android:src="@drawable/btn_back"/>
+
+        <TextView
+            android:id="@+id/airportInfoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/timer"
+            android:textColor="#ffffff"
+            android:textSize="18dp"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <!-- 선택 효과 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:background="#1AFFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ycengine.rainsound.library.wheel.WheelView
+                android:id="@+id/mPlayerTimerGridWheelView"
+                android:layout_width="40dp"
+                android:layout_height="64dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.ycengine.rainsound.library.wheel.WheelView
+                    android:id="@+id/mPlayerTimerHourWheelView"
+                    android:layout_width="60dp"
+                    android:layout_height="192dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:alpha="0.6"
+                    android:text="@string/hour"
+                    android:textColor="#FFFFFFFF"/>
+
+                <com.ycengine.rainsound.library.wheel.WheelView
+                    android:id="@+id/mPlayerTimerMinuteWheelView"
+                    android:layout_width="60dp"
+                    android:layout_height="192dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:alpha="0.6"
+                    android:text="@string/minute"
+                    android:textColor="#FFFFFFFF"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <!-- 고정 눈금 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_hniddle"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 시작 버튼 -->
+    <RelativeLayout
+        android:id="@+id/rlPlayerTimerToggleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appBgColor">
+
+        <TextView
+            android:id="@+id/tvPlayerTimerToggleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/start"
+            android:textColor="#FFFFFFFF"
+            android:textSize="13dp"/>
+
+    </RelativeLayout>
+
+    <!-- AD -->
+    <RelativeLayout
+        android:id="@+id/mAdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rlPlayerTimerToggleBtn"
+        android:background="#80000000">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

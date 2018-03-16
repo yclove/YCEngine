@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">쇼핑 리스트</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~1134199809</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/1241354470</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/9975908392</string>
+
+    <string name="hint_add_goods_name">쇼핑할 물품을 입력하세요.</string>
+
+    <string name="txt_goods_reg_date">(%1$s)</string>
+    <string name="notification_lock_status_bar">알림 : 상태 바에 고정</string>
+
+</resources>

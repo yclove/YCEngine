@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="app_name">정시출근</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~5419927158</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/3444500508</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/2103498670</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/7599846868</string>
+
+    <string name="title_setting">알람설정</string>
+
+    <string name="hint_noti_title">알람 이름을 입력해 주세요.</string>
+
+    <string name="msg_choice_noti_type">알람음 또는 진동을 선택해주세요.</string>
+    <string name="msg_delete_noti_confirm">해당 알람을 삭제하시겠습니까 ?</string>
+    <string name="msg_already_pass_time">이미 지난 시간은 선택할 수 없습니다.</string>
+    <string name="msg_not_answer">오답입니다. 다시 계산해 주세요.</string>
+    <string name="msg_find_hidden_icons">숨겨진 아이콘을 찾아주세요.</string>
+
+    <string name="game_mission">알람 해지 미션</string>
+    <string name="game_non">터치</string>
+    <string name="game_calculation">사칙연산</string>
+    <string name="game_calculation_simple">덧셈 / 뺄셈</string>
+    <string name="game_puzzle">숨은그림찾기</string>
+    <string name="game_finish">알람 해지</string>
+
+    <string name="repeat_day">요일반복</string>
+    <string name="sound">알람음</string>
+    <string name="vibrate">진동</string>
+    <string name="noti_name">알람 이름</string>
+
+    <string name="alarm_set_for">%1$s 후 알람이 울립니다.</string>
+
+</resources>

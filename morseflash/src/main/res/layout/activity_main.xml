@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBgColor"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- 상단 메뉴 바 -->
+    <LinearLayout
+        android:id="@+id/mTabMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="@string/app_name"
+                android:textColor="#ffffff"
+                android:textSize="18dp"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/tabMenuLight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvMenuLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_round_blue"
+                    android:gravity="center"
+                    android:text="@string/menu_light"
+                    android:textColor="@color/appBgColor"
+                    android:textSize="15dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabMenuFlicker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvMenuFlicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_round_blue"
+                    android:gravity="center"
+                    android:text="@string/menu_flicker"
+                    android:textColor="@color/appBgColor"
+                    android:textSize="15dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabMenuMorse"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvMenuMorse"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_round_blue"
+                    android:gravity="center"
+                    android:text="@string/menu_morse"
+                    android:textColor="@color/appBgColor"
+                    android:textSize="15dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appBgColor"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Switch
+                android:id="@+id/mSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="@string/flash_auto_launch"
+                android:textColor="#ffffff"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 손전등 버튼 -->
+    <ImageButton
+        android:id="@+id/lightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/btn_flash_off"
+        android:visibility="visible"/>
+
+    <!-- 점멸등 버튼 -->
+    <ImageButton
+        android:id="@+id/flickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/btn_flash_off"
+        android:visibility="gone"/>
+
+    <!-- AD -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+    <!-- 속도 조절 바 -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/adView"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:paddingBottom="13dp"
+        android:paddingTop="13dp"
+        android:progress="50"
+        android:progressDrawable="@drawable/seekbar_player_volume"
+        android:thumb="@android:color/transparent"/>
+
+    <!-- 모스 버튼 -->
+    <ImageButton
+        android:id="@+id/morseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/btn_flash_off"
+        android:visibility="gone"/>
+
+    <!-- 모스 플래시 해더 -->
+    <LinearLayout
+        android:id="@+id/mMoreHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="visible"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/adView"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/morseText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:inputType="textUri"
+            android:background="@drawable/bg_round_blue"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:paddingRight="20dp"
+            android:maxLength="30"
+            android:textColor="#888"
+            android:textSize="13dp"/>
+
+        <Switch
+            android:id="@+id/mRepeatSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:text="@string/repeat"
+            android:textColor="#ffffff"
+            android:textSize="13dp"/>
+
+    </LinearLayout>
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFFFF"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <CalendarView
+            android:id="@+id/mCalendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusedMonthDateColor="#ff0000"
+            android:unfocusedMonthDateColor="#0000ff"
+            android:selectedWeekBackgroundColor="#ffff00"
+            android:showWeekNumber="false"
+            android:weekSeparatorLineColor="#00ff00"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#333"/>
+
+        <!-- Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFFFF"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mDialogCancelBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/dialog_alert_no"
+                android:textColor="#039574"
+                android:textSize="12dp"/>
+
+            <Button
+                android:id="@+id/mDialogConfirmBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="#039574"
+                android:gravity="center"
+                android:text="@string/dialog_alert_yes"
+                android:textColor="#fff"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

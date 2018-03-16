@@ -1,0 +1,103 @@
+<resources>
+
+    <string name="app_name">YCLibrary</string>
+    <string name="app_version">Version : %1$s</string>
+
+    <string name="permission_rationale_message_storage">Access to storage space\n\nPlease allow storage space for shopping list settings. If you do not grant permission, you will not be able to use the app.\n\nYou can do this in the next step.</string>
+    <string name="permission_rationale_message_camera">Guide to camera access\n\nPlease allow camera permissions for flash activation. If you do not grant permission, you will not be able to use the app.\n\nYou can do this in the next step.</string>
+    <string name="permission_denied_message">Permissions can be granted under [Settings] > [Permissions].</string>
+
+    <string name="app_finish">Press the Back button again to quit the app.</string>
+    <string name="force_update_msg">Updates are required for better service.</string>
+    <string name="force_positive_msg">update</string>
+    <string name="force_negative_msg">finish</string>
+    <string name="choice_update_msg">You can experience the various services by receiving updates.</string>
+    <string name="non_force_negative_msg">Afterwards</string>
+
+    <string name="dialog_back_message_end">Are you sure you want to quit the app?</string>
+    <string name="dialog_alert_yes">Confirm</string>
+    <string name="dialog_alert_no">Cancel</string>
+    <string name="dialog_alert_see">See</string>
+
+    <string name="preview">Preview</string>
+    <string name="setting">Setting</string>
+    <string name="select">Select</string>
+    <string name="timer">Timer</string>
+    <string name="timer_format">%1$s´%2$s˝</string>
+    <string name="start">Start</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+    <string name="save">Save</string>
+
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thu</string>
+    <string name="friday">Fir</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
+
+    <string name="hour_00">00 Hour</string>
+    <string name="hour_01">01 Hour</string>
+    <string name="hour_02">02 Hour</string>
+    <string name="hour_03">03 Hour</string>
+    <string name="hour_04">04 Hour</string>
+    <string name="hour_05">05 Hour</string>
+    <string name="hour_06">06 Hour</string>
+    <string name="hour_07">07 Hour</string>
+    <string name="hour_08">08 Hour</string>
+    <string name="hour_09">09 Hour</string>
+    <string name="hour_10">10 Hour</string>
+    <string name="hour_11">11 Hour</string>
+    <string name="hour_12">12 Hour</string>
+    <string name="hour_13">13 Hour</string>
+    <string name="hour_14">14 Hour</string>
+    <string name="hour_15">15 Hour</string>
+    <string name="hour_16">16 Hour</string>
+    <string name="hour_17">17 Hour</string>
+    <string name="hour_18">18 Hour</string>
+    <string name="hour_19">19 Hour</string>
+    <string name="hour_20">20 Hour</string>
+    <string name="hour_21">21 Hour</string>
+    <string name="hour_22">22 Hour</string>
+    <string name="hour_23">23 Hour</string>
+
+    <!-- For DurationUtil -->
+    <string name="day_hour_and_minute">1 day, 1 hour, and 1 minute</string>
+    <string name="days_hour_and_minute">%1$d days, 1 hour, and 1 minute</string>
+    <string name="days_hours_and_minute">%1$d days, %2$d hours, and 1 minute</string>
+    <string name="days_hour_and_minutes">%1$d days, 1 hours, and %3$d minutes</string>
+    <string name="days_hours_and_minutes">%1$d days, %2$d hours, and %3$d minutes</string>
+    <string name="day_hours_and_minute">1 day, %2$d hours, and 1 minute</string>
+    <string name="day_hours_and_minutes">1 day, %2$d hours, and %3$d minutes</string>
+    <string name="day_hour_and_minutes">1 day, 1 hour, and %3$d minutes</string>
+    <string name="day_and_hour">1 day and 1 hour</string>
+    <string name="days_and_hour">%1$d days and 1 hour</string>
+    <string name="day_and_hours">1 day and %2$d hours</string>
+    <string name="days_and_hours">%1$d days and %2$d hours</string>
+    <string name="day_and_minute">1 day and 1 minute</string>
+    <string name="days_and_minute">%1$d days and 1 minute</string>
+    <string name="day_and_minutes">1 day and %3$d minutes</string>
+    <string name="days_and_minutes">%1$d days and %3$d minutes</string>
+    <string name="hour_and_minute">1 hour and 1 minute</string>
+    <string name="hour_and_minutes">1 hour and %3$d minutes</string>
+    <string name="hours_and_minute">%2$d hours and 1 minute</string>
+    <string name="hours_and_minutes">%2$d hours and %3$d minutes</string>
+    <string name="a_day">1 day</string>
+    <string name="days">%1$d days</string>
+    <string name="a_hour">1 hour</string>
+    <string name="hours">%2$d hours</string>
+    <string name="a_minute">1 minute</string>
+    <string name="minutes">%3$d minutes</string>
+    <string name="less_than_one_minute">less than 1 minute</string>
+
+    <string name="abbrev_days_hours_and_minutes">%1$dd %2$dh %3$dm</string>
+    <string name="abbrev_days_and_hours">%1$dd %2$dh</string>
+    <string name="abbrev_days_and_minutes">%1$dd %3$dm</string>
+    <string name="abbrev_hours_and_minutes">%2$dh %3$dm</string>
+    <string name="abbrev_days">%1$dd</string>
+    <string name="abbrev_hours">%2$dh</string>
+    <string name="abbrev_minutes">%3$dm</string>
+    <string name="abbrev_less_than_one_minute">&lt;1m</string>
+
+</resources>

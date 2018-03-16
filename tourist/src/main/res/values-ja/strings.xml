@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">韓国ツーリスト</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~8274761563</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/6846129822</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/2989100709</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/9362937364</string>
+
+    <string name="common_color_icon">●</string>
+
+</resources>

@@ -1,0 +1,51 @@
+<resources>
+
+    <string name="app_name">リアルタイム仁川空港</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~9552446579</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/5936635198</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/3042878549</string>
+    <!-- 네이티브 -->
+    <string name="banner_ad_native_id">ca-app-pub-4803302946270084/6023021835</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/2072641297</string>
+
+    <string name="api_calling_msg">データの取得中です。</string>
+
+    <string name="realtime_gate">リアルタイム出国</string>
+    <string name="realtime_parking_lot">リアルタイム駐車場</string>
+
+    <string name="airport_info_title">仁川空港出国ロビーの状態</string>
+    <string name="airport_info_latest_update">최종업데이트 %1$s</string>
+    <string name="airport_info_total_title">現在の待ち人数</string>
+    <string name="airport_info_passenger_per_time">時間帯別の予想乗客数</string>
+    <string name="airport_info_today">今日</string>
+    <string name="airport_info_tomorrow">明日</string>
+    <string name="airport_info_at_time">%1$s/%2$s %3$s時</string>
+    <string name="airport_info_wait_passenger">%1$s名</string>
+    <string name="airport_info_total_wait_passenger">総 %1$s名</string>
+    <string name="airport_info_wait_level_3">大変混雑</string>
+    <string name="airport_info_wait_level_2">混雑</string>
+    <string name="airport_info_wait_level_1">普通</string>
+    <string name="airport_info_wait_level_0">円滑</string>
+    <string name="airport_info_wait_level_9">運営終了</string>
+    <string name="airport_info_gate">時間帯</string>
+    <string name="airport_info_gate_5">5番</string>
+    <string name="airport_info_gate_4">4番</string>
+    <string name="airport_info_gate_3">3番</string>
+    <string name="airport_info_gate_2">2番</string>
+    <string name="airport_info_update">アップデート完了\n%1$s</string>
+    <string name="airport_info_update_not_yet">既に最新情報に更新されています。</string>
+
+    <string name="parking_lot_info_title">仁川国際空港リアルタイムの駐車場</string>
+    <string name="passenger_terminal">旅客ターミナル</string>
+    <string name="parking_lot_info_short">短期駐車場</string>
+    <string name="parking_lot_info_long">長期駐車場</string>
+    <string name="parking_lot_info_tower">駐車場タワー</string>
+    <string name="parking_lot_info_full">いっぱい</string>
+    <string name="parking_lot_info_usable">%1$s利用可能</string>
+
+</resources>

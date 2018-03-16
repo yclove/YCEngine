@@ -1,0 +1,47 @@
+<resources>
+
+    <string name="app_name">RainSound</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~6313571967</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/1061245283</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/9416255754</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/8444254743</string>
+
+    <string name="msg_timer">The app will automatically shut down after %1$d hours and %2$d minutes.</string>
+    <string name="msg_finish_by_timer">App auto-terminated by timer.</string>
+
+    <string name="core_bungalow_downpour">Outdoor Terrace</string>
+    <string name="core_dripping_water">Falling rain</string>
+    <string name="core_hailstorm">Hailstorm</string>
+    <string name="core_inside_car">A window in a heavy rain</string>
+    <string name="core_inside_motorhome">Inside the car</string>
+    <string name="core_light_rain_backyard">Garden rain</string>
+    <string name="core_light_rain_night">Night drizzle</string>
+    <string name="core_lodge_rainforest2">Rain in the woods</string>
+    <string name="core_lodge_rainforest3">From the Eiffel Tower</string>
+    <string name="core_morning_rain">Alley rain</string>
+    <string name="core_puddles">Rainy stream</string>
+    <string name="core_rain_backyard">Rainy street</string>
+    <string name="core_rain_city">Rain from station</string>
+    <string name="core_rain_forest">Rainy Hiking Trail</string>
+    <string name="core_rain_gutter">Gutter</string>
+    <string name="core_rain_park">Rain of a park</string>
+    <string name="core_rain_skylight">Rainy warehouse</string>
+    <string name="core_rain_street">A puddle</string>
+    <string name="core_rain_tin_roof">Roof drizzle</string>
+    <string name="core_rain_umbrella">Umbrella rain</string>
+    <string name="core_rain_under_tree">Above the tree path</string>
+    <string name="core_rain_window">A windy window</string>
+    <string name="core_rainy_night_crickets">Crickets and drizzle</string>
+    <string name="core_strong_thunderstorm">A strong thunderstorm</string>
+    <string name="core_tent_rain">A tent in the rain</string>
+    <string name="core_thunderstorm_countryside">A remote thunderstorm</string>
+    <string name="core_thunderstorm">Thunderstorm</string>
+    <string name="core_tropical_storm">A street under heavy rain</string>
+    <string name="core_wind_rain">Rainstorm</string>
+
+</resources>

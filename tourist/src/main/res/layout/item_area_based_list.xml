@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="area"
+            type="com.ycengine.tourist.model.AreaBasedList"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mRootView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_round_cube">
+
+        <TextView
+            android:id="@+id/mTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{area.title}"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/mAddress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"/>
+
+        <TextView
+            android:id="@+id/mAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{area.addr1 + ' ' + area.addr2}"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/mCategory"
+            app:layout_constraintTop_toBottomOf="@+id/mTitle"/>
+
+        <TextView
+            android:id="@+id/mCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{(area.cat1 == "" ? "" : area.cat1) + (area.cat2 == "" ? "" : " > " + area.cat2) + (area.cat3 == "" ? "" : " > " + area.cat3)}'
+            android:textColor="#fff"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mAddress"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

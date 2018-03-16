@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">Morse Flash</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~1627146094</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/9928130332</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/7301966999</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/5042597179</string>
+
+    <string name="menu_light">Flashlight</string>
+    <string name="menu_flicker">Flicker</string>
+    <string name="menu_morse">Morse</string>
+
+    <string name="morsecodeinfo">Please enter the sentence.</string>
+    <string name="flash_auto_launch">Turn on auto-flash when running app</string>
+    <string name="repeat">Repeat</string>
+
+</resources>

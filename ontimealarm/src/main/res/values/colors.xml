@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="appBgColor">#039574</color>
+    <color name="appTxtColor">#ffffff</color>
+
+    <color name="appTitleColor">#CC000000</color>
+    <color name="appSubTitleColor">#4D000000</color>
+
+    <color name="appTitleSatColor">#005a9e</color>
+    <color name="appTitleSunColor">#e53433</color>
+
+</resources>

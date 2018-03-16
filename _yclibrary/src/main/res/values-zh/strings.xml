@@ -1,0 +1,103 @@
+<resources>
+
+    <string name="app_name">YCLibrary</string>
+    <string name="app_version">版本 : %1$s</string>
+
+    <string name="permission_rationale_message_storage">访问存储空间\n\n请允许存储空间进行购物清单设置。如果您没有授权，您将无法使用该应用。\n\n你可以在下一步做到这一点。</string>
+    <string name="permission_rationale_message_camera">相机访问指南\n\n请允许闪光灯激活的相机权限。如果您没有授权，您将无法使用该应用。\n\n你可以在下一步做到这一点。</string>
+    <string name="permission_denied_message">在 [设定] > [权限] 内许可授权。</string>
+
+    <string name="app_finish">再次点击返回键，将结束应用程序。</string>
+    <string name="force_update_msg">为了更好的服务，需要更新。</string>
+    <string name="force_positive_msg">立即更新</string>
+    <string name="force_negative_msg">退出</string>
+    <string name="choice_update_msg">分亨功能全新升级，更有好的体验, 赶紧更新！</string>
+    <string name="non_force_negative_msg">以后</string>
+
+    <string name="dialog_back_message_end">确定要退出?</string>
+    <string name="dialog_alert_yes">是</string>
+    <string name="dialog_alert_no">否</string>
+    <string name="dialog_alert_see">看到</string>
+
+    <string name="preview">预习</string>
+    <string name="setting">设置</string>
+    <string name="select">选择</string>
+    <string name="timer">计时器</string>
+    <string name="timer_format">%1$s´%2$s˝</string>
+    <string name="start">开始</string>
+    <string name="hour">小时</string>
+    <string name="minute">分钟</string>
+    <string name="save">保存</string>
+
+    <string name="monday">周一</string>
+    <string name="tuesday">周二</string>
+    <string name="wednesday">周三</string>
+    <string name="thursday">周四</string>
+    <string name="friday">周五</string>
+    <string name="saturday">周六</string>
+    <string name="sunday">周日</string>
+
+    <string name="hour_00">00 点</string>
+    <string name="hour_01">01 点</string>
+    <string name="hour_02">02 点</string>
+    <string name="hour_03">03 点</string>
+    <string name="hour_04">04 点</string>
+    <string name="hour_05">05 点</string>
+    <string name="hour_06">06 点</string>
+    <string name="hour_07">07 点</string>
+    <string name="hour_08">08 点</string>
+    <string name="hour_09">09 点</string>
+    <string name="hour_10">10 点</string>
+    <string name="hour_11">11 点</string>
+    <string name="hour_12">12 点</string>
+    <string name="hour_13">13 点</string>
+    <string name="hour_14">14 点</string>
+    <string name="hour_15">15 点</string>
+    <string name="hour_16">16 点</string>
+    <string name="hour_17">17 点</string>
+    <string name="hour_18">18 点</string>
+    <string name="hour_19">19 点</string>
+    <string name="hour_20">20 点</string>
+    <string name="hour_21">21 点</string>
+    <string name="hour_22">22 点</string>
+    <string name="hour_23">23 点</string>
+
+    <!-- For DurationUtil -->
+    <string name="day_hour_and_minute">1天，1小时和1分钟</string>
+    <string name="days_hour_and_minute">%1$d天，1小时和1分钟</string>
+    <string name="days_hours_and_minute">%1$d天，%2$d小时和1分钟</string>
+    <string name="days_hour_and_minutes">%1$d天，1小时和%3$d分钟</string>
+    <string name="days_hours_and_minutes">%1$d天，%2$d小时和%3$d分钟</string>
+    <string name="day_hours_and_minute">1天，%2$d小时和1分钟</string>
+    <string name="day_hours_and_minutes">1天，%2$d小时和%3$d分钟</string>
+    <string name="day_hour_and_minutes">1天，1小时和%3$d分钟</string>
+    <string name="day_and_hour">1天，1小时</string>
+    <string name="days_and_hour">%1$d天，1小时</string>
+    <string name="day_and_hours">1天，%2$d小时</string>
+    <string name="days_and_hours">%1$d天，%2$d小时</string>
+    <string name="day_and_minute">1天，1分钟</string>
+    <string name="days_and_minute">%1$d天，1分钟</string>
+    <string name="day_and_minutes">1天，%3$d分钟</string>
+    <string name="days_and_minutes">%1$d天，%3$d分钟</string>
+    <string name="hour_and_minute">1小时和1分钟</string>
+    <string name="hour_and_minutes">1小时和%3$d分钟</string>
+    <string name="hours_and_minute">%2$d小时和1分钟</string>
+    <string name="hours_and_minutes">%2$d小时和%3$d分钟</string>
+    <string name="a_day">1天</string>
+    <string name="days">%1$d天</string>
+    <string name="a_hour">1小时</string>
+    <string name="hours">%2$d小时</string>
+    <string name="a_minute">1分钟</string>
+    <string name="minutes">%3$d分钟</string>
+    <string name="less_than_one_minute">不到1分钟</string>
+
+    <string name="abbrev_days_hours_and_minutes">%1$d天%2$d小时%3$d分钟</string>
+    <string name="abbrev_days_and_hours">%1$d天%2$d小时</string>
+    <string name="abbrev_days_and_minutes">%1$d天%3$d分钟</string>
+    <string name="abbrev_hours_and_minutes">%2$d小时%3$d分钟</string>
+    <string name="abbrev_days">%1$d天</string>
+    <string name="abbrev_hours">%2$d小时</string>
+    <string name="abbrev_minutes">%3$d分钟</string>
+    <string name="abbrev_less_than_one_minute">&lt;1分钟</string>
+
+</resources>

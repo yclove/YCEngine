@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/appBgColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="@android:style/Theme.Material.Light.Dialog.Alert"/>
+
+</resources>

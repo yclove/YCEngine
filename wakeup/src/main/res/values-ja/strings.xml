@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="app_name">目を覚ます</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~5419927158</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/3444500508</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/2103498670</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/7599846868</string>
+
+    <string name="title_setting">アラーム設定</string>
+
+    <string name="hint_noti_title">アラーム名を入力してください。</string>
+
+    <string name="msg_choice_noti_type">アラーム音や振動を選択してください。</string>
+    <string name="msg_delete_noti_confirm">このアラームを削除してもよろしいですか？</string>
+    <string name="msg_already_pass_time">過去の時間を選択することはできません。</string>
+    <string name="msg_not_answer">これは間違った答えです。 再計算してください。</string>
+    <string name="msg_find_hidden_icons">隠れたアイコンを見つけてください。</string>
+
+    <string name="game_mission">アラーム解除ミッション</string>
+    <string name="game_non">タッチ</string>
+    <string name="game_calculation">算術演算</string>
+    <string name="game_calculation_simple">添加 / 減算</string>
+    <string name="game_puzzle">絵のパズル</string>
+    <string name="game_finish">アラームをキャンセルする</string>
+
+    <string name="repeat_day">繰り返し日</string>
+    <string name="sound">アラーム音</string>
+    <string name="vibrate">振動</string>
+    <string name="noti_name">アラーム名</string>
+
+    <string name="alarm_set_for">今から%1$sアラームが設定されています。</string>
+
+</resources>

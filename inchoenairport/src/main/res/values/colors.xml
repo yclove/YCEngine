@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="appBgColor">#005a9e</color>
+    <color name="appTxtColor">#ffffff</color>
+
+    <color name="airport_level_0">#2196f4</color>
+    <color name="airport_level_1">#4caf50</color>
+    <color name="airport_level_2">#ffc107</color>
+    <color name="airport_level_3">#f44336</color>
+    <color name="airport_level_9">#607d8b</color>
+
+    <color name="airport_level_0_alpha_behind">#282196f4</color>
+    <color name="airport_level_1_alpha_behind">#284caf50</color>
+    <color name="airport_level_2_alpha_behind">#28ffc107</color>
+    <color name="airport_level_3_alpha_behind">#28f44336</color>
+    <color name="airport_level_9_alpha_behind">#28607d8b</color>
+
+    <color name="airport_level_0_alpha_front">#3c2196f4</color>
+    <color name="airport_level_1_alpha_front">#3c4caf50</color>
+    <color name="airport_level_2_alpha_front">#3cffc107</color>
+    <color name="airport_level_3_alpha_front">#3cf44336</color>
+    <color name="airport_level_9_alpha_front">#3c607d8b</color>
+
+</resources>

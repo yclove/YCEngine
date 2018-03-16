@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/appBgColor">
+
+            <ImageButton
+                android:id="@+id/mCloseBtn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:src="@drawable/btn_back"/>
+
+            <TextView
+                android:id="@+id/airportInfoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="@string/realtime_parking_lot"
+                android:textColor="#ffffff"
+                android:textSize="18dp"/>
+
+        </FrameLayout>
+
+        <com.yalantis.phoenix.PullToRefreshView
+            android:id="@+id/pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!-- 최종 업데이트 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvLatestDateTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="#888"
+                            android:textSize="11dp"/>
+
+                    </LinearLayout>
+
+                    <!-- 여객터미널 -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_round_gray">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.5"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/passenger_terminal"
+                            android:textColor="#888"
+                            android:textSize="@dimen/app_text_size"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <!-- 단기 주차장 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:layout_weight="1"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:background="@drawable/bg_round_short"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <!-- 1F -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="1F"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvShortPeriod1F"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                            <!-- B1 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="B1"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvShortPeriodB1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                            <!-- B2 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="B2"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvShortPeriodB2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                            <!-- B3 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="B3"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvShortPeriodB3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <!-- 장기 주차장 상 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_round_long"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <!-- P2 Tower -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="T"
+                                    android:layout_marginRight="3dp"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="P2"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvTowerP2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                            <!-- P2 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="P2"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvLongPeriodP2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_round_long"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <!-- P1 Tower -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="T"
+                                    android:layout_marginRight="3dp"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="P1"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvTowerP1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                            <!-- P1 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="P1"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvLongPeriodP1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <!-- 장기 주차장 하 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_round_long"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <!-- P4 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="P4"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvLongPeriodP4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_round_long"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <!-- P3 -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/label_txt_gray"
+                                    android:gravity="center"
+                                    android:text="P3"
+                                    android:textColor="#888"
+                                    android:textSize="@dimen/app_text_size"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvLongPeriodP3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:textColor="#888888"
+                                    android:textSize="@dimen/app_text_size"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <!-- 단기 / 장기 주차장 소개 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_round_short"
+                            android:padding="15dp"
+                            android:text="@string/parking_lot_info_short"
+                            android:textColor="#888"
+                            android:textSize="@dimen/app_text_size"/>
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_round_long"
+                            android:padding="15dp"
+                            android:text="@string/parking_lot_info_long"
+                            android:textColor="#888"
+                            android:textSize="@dimen/app_text_size"/>
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:alpha="0.3"
+                            android:background="@drawable/label_txt_gray"
+                            android:gravity="center"
+                            android:text="T"
+                            android:layout_marginRight="3dp"
+                            android:textColor="#888"
+                            android:textSize="@dimen/app_text_size"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/parking_lot_info_tower"
+                            android:textColor="#888"
+                            android:textSize="@dimen/app_text_size"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </com.yalantis.phoenix.PullToRefreshView>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+</RelativeLayout>

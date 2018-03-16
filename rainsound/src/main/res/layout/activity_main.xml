@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mMainViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:id="@+id/vBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4D000000"/>
+
+    <View
+        android:id="@+id/vStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vStatusBar"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <!-- Indicator -->
+        <RelativeLayout
+            android:id="@+id/indicatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="92dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="44dp"
+                android:background="#33FFFFFF"/>
+
+            <com.ycengine.yclibrary.widget.MultiViewPager
+                android:id="@+id/mHeaderViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:matchChildWidth="@+id/vg_today"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:enabled="false"/>
+
+            <RelativeLayout
+                android:id="@+id/mLicensedBtn"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:alpha="0.7"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="13dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/btn_more"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- AD -->
+    <RelativeLayout
+        android:id="@+id/mAdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#80000000">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"/>
+
+    </RelativeLayout>
+
+    <!-- 컨트롤러 -->
+    <LinearLayout
+        android:id="@+id/mController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mAdLayout"
+        android:background="#80000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <!-- 타이머 -->
+        <RelativeLayout
+            android:id="@+id/mTimerBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/mTimerImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/btn_timer"/>
+
+            <TextView
+                android:id="@+id/tvTimerFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_round_timer"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:textColor="#888"
+                android:textSize="11dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <!-- 번개 -->
+        <RelativeLayout
+            android:id="@+id/mThunderBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/mThunderImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/btn_thunder"/>
+
+            <com.ycengine.yclibrary.widget.CircularSeekBar
+                android:id="@+id/mThunderSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:circle_color="#888"
+                app:circle_stroke_width="7dp"
+                app:pointer_color="@android:color/transparent"
+                app:pointer_halo_color="@android:color/transparent"
+                app:progress="100"/>
+
+        </RelativeLayout>
+
+        <!-- 재생 -->
+        <RelativeLayout
+            android:id="@+id/mPlayBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/mPlayImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/btn_play"/>
+
+            <com.ycengine.yclibrary.widget.CircularSeekBar
+                android:id="@+id/mRainSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:circle_color="#888"
+                app:circle_stroke_width="10dp"
+                app:pointer_color="@android:color/transparent"
+                app:pointer_halo_color="@android:color/transparent"
+                app:progress="100"/>
+
+        </RelativeLayout>
+
+        <!-- 피아노 -->
+        <RelativeLayout
+            android:id="@+id/mPianoBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/mPianoImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/btn_piano"/>
+
+            <com.ycengine.yclibrary.widget.CircularSeekBar
+                android:id="@+id/mPianoSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:circle_color="#888"
+                app:circle_stroke_width="7dp"
+                app:pointer_color="@android:color/transparent"
+                app:pointer_halo_color="@android:color/transparent"
+                app:progress="100"/>
+
+        </RelativeLayout>
+
+        <!-- 볼륨 -->
+        <RelativeLayout
+            android:id="@+id/mVolumeBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/mVolumeImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/btn_volume"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 라이센스 팝업 -->
+    <RelativeLayout
+        android:id="@+id/mLicensedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vStatusBar"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E6000000"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:gravity="start|center"
+                android:textColor="#aaa"
+                android:text="Licensed"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:gravity="start|center"
+                android:textColor="#888"
+                android:text="MUSIC\n\n'Relaxing Piano' ('Meditation Impromptu 03' by Kevin MacLeod - incompetech.com) is licensed under Creative Commons Attribution 3.0 (CC BY)\n\n\nRAIN\n\nThe rain sounds are licensed under Creative Commons Zero (CC0) - public Domain."
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:enabled="false"/>
+
+        <!-- 라이센스 팝업 > Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <!-- 더보기 팝업 > Header > 닫기 -->
+            <RelativeLayout
+                android:id="@+id/mLicensedCloseBtn"
+                android:layout_width="73dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/btn_close"
+                    android:contentDescription="@string/app_name"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

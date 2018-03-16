@@ -1,0 +1,103 @@
+<resources>
+
+    <string name="app_name">YCLibrary</string>
+    <string name="app_version">버전 : %1$s</string>
+
+    <string name="permission_rationale_message_storage">저장공간 접근권한 안내\n\n쇼핑 목록 설정을 위해 저장공간 권한을 허용해주세요. 권한을 허용하지 않으면 앱을 사용하실 수 없습니다.\n\n권한허용은 다음단계에서 할 수 있습니다.</string>
+    <string name="permission_rationale_message_camera">카메라 접근권한 안내\n\n플래시 활성을 위해 카메라 권한을 허용해주세요. 권한을 허용하지 않으면 앱을 사용하실 수 없습니다.\n\n권한허용은 다음단계에서 할 수 있습니다.</string>
+    <string name="permission_denied_message">[설정] > [권한] 에서 권한을 허용할 수 있습니다.</string>
+
+    <string name="app_finish">뒤로 버튼을 한번 더 누르시면 앱이 종료됩니다.</string>
+    <string name="force_update_msg">더 좋은 서비스를 위해 업데이트가 필요합니다.</string>
+    <string name="force_positive_msg">업데이트</string>
+    <string name="force_negative_msg">종료</string>
+    <string name="choice_update_msg">업데이트를 받으시면 다양한 서비스를 경험하실 수 있습니다.</string>
+    <string name="non_force_negative_msg">나중에</string>
+
+    <string name="dialog_back_message_end">앱을 종료하시겠습니까?</string>
+    <string name="dialog_alert_yes">확인</string>
+    <string name="dialog_alert_no">취소</string>
+    <string name="dialog_alert_see">보기</string>
+
+    <string name="preview">미리보기</string>
+    <string name="setting">설정</string>
+    <string name="select">선택</string>
+    <string name="timer">타이머</string>
+    <string name="timer_format">%1$s´%2$s˝</string>
+    <string name="start">시작</string>
+    <string name="hour">시</string>
+    <string name="minute">분</string>
+    <string name="save">저장</string>
+
+    <string name="monday">월</string>
+    <string name="tuesday">화</string>
+    <string name="wednesday">수</string>
+    <string name="thursday">목</string>
+    <string name="friday">금</string>
+    <string name="saturday">토</string>
+    <string name="sunday">일</string>
+
+    <string name="hour_00">00 시</string>
+    <string name="hour_01">01 시</string>
+    <string name="hour_02">02 시</string>
+    <string name="hour_03">03 시</string>
+    <string name="hour_04">04 시</string>
+    <string name="hour_05">05 시</string>
+    <string name="hour_06">06 시</string>
+    <string name="hour_07">07 시</string>
+    <string name="hour_08">08 시</string>
+    <string name="hour_09">09 시</string>
+    <string name="hour_10">10 시</string>
+    <string name="hour_11">11 시</string>
+    <string name="hour_12">12 시</string>
+    <string name="hour_13">13 시</string>
+    <string name="hour_14">14 시</string>
+    <string name="hour_15">15 시</string>
+    <string name="hour_16">16 시</string>
+    <string name="hour_17">17 시</string>
+    <string name="hour_18">18 시</string>
+    <string name="hour_19">19 시</string>
+    <string name="hour_20">20 시</string>
+    <string name="hour_21">21 시</string>
+    <string name="hour_22">22 시</string>
+    <string name="hour_23">23 시</string>
+
+    <!-- For DurationUtil -->
+    <string name="day_hour_and_minute">1 일, 1 시간 1 분</string>
+    <string name="days_hour_and_minute">%1$d 일 1 시간 1 분</string>
+    <string name="days_hours_and_minute">%1$d 일 %2$d 시간 1 분</string>
+    <string name="days_hour_and_minutes">%1$d 일 1 시간 %3$d 분</string>
+    <string name="days_hours_and_minutes">%1$d 일 %2$d 시간 %3$d 분</string>
+    <string name="day_hours_and_minute">1 일 %2$d 시간 1 분</string>
+    <string name="day_hours_and_minutes">1 일 %2$d 시간 %3$d 분</string>
+    <string name="day_hour_and_minutes">1 일 1 시간 %3$d 분</string>
+    <string name="day_and_hour">1 일 1 시간</string>
+    <string name="days_and_hour">%1$d 일 1 시간</string>
+    <string name="day_and_hours">1 일 %2$d 시간</string>
+    <string name="days_and_hours">%1$d 일 %2$d 시간</string>
+    <string name="day_and_minute">1 일 1 분</string>
+    <string name="days_and_minute">%1$d 일 1 분</string>
+    <string name="day_and_minutes">1 일 %3$d 분</string>
+    <string name="days_and_minutes">%1$d 일 %3$d 분</string>
+    <string name="hour_and_minute">1 시간 1 분</string>
+    <string name="hour_and_minutes">1 시간 %3$d 분</string>
+    <string name="hours_and_minute">%2$d 시간 1 분</string>
+    <string name="hours_and_minutes">%2$d 시간 %3$d 분</string>
+    <string name="a_day">1 일</string>
+    <string name="days">%1$d 일</string>
+    <string name="a_hour">1 시간</string>
+    <string name="hours">%2$d 시간</string>
+    <string name="a_minute">1 분</string>
+    <string name="minutes">%3$d 분</string>
+    <string name="less_than_one_minute">1 분 이내</string>
+
+    <string name="abbrev_days_hours_and_minutes">%1$d일 %2$d시간 %3$d분</string>
+    <string name="abbrev_days_and_hours">%1$d일 %2$d시간</string>
+    <string name="abbrev_days_and_minutes">%1$d일 %3$d분</string>
+    <string name="abbrev_hours_and_minutes">%2$d시간 %3$d분</string>
+    <string name="abbrev_days">%1$d일</string>
+    <string name="abbrev_hours">%2$d시간</string>
+    <string name="abbrev_minutes">%3$d분</string>
+    <string name="abbrev_less_than_one_minute">&lt;1분</string>
+
+</resources>

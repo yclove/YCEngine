@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    tools:context=".FilterActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/mHeader"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#e600afd5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/btnHeaderTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btnHeaderImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/btn_sort"/>
+
+        </LinearLayout>
+
+        <!-- 뒤로가기 버튼 -->
+        <RelativeLayout
+            android:id="@+id/mHeaderBack"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/btn_back"/>
+
+        </RelativeLayout>
+
+        <!-- 확인 버튼 -->
+        <RelativeLayout
+            android:id="@+id/mHeaderCheck"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:onClick="onClick">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/btn_check"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Footer -->
+    <RelativeLayout
+        android:id="@+id/mInitFilter"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/mInitFilterImage"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_sort_disable"
+            android:contentDescription="@string/app_name"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mInitFilter"
+        android:layout_below="@id/mHeader"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <!-- Motion ViewPager -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <com.ycengine.yclibrary.widget.MultiViewPager
+                    android:id="@+id/mMotionViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    app:matchChildWidth="@+id/vg_cover_motion"/>
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/img_vniddle"/>
+
+            </RelativeLayout>
+
+            <!-- AreaCode ViewPager -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="44dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="#FFF2F2F2"/>
+
+                <com.ycengine.yclibrary.widget.MultiViewPager
+                    android:id="@+id/mAreaCodeViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:matchChildWidth="@+id/vg_cover"/>
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/img_vcenter"/>
+
+            </RelativeLayout>
+
+            <!-- Sigungu ViewPager -->
+            <RelativeLayout
+                android:id="@+id/mSigunguLayout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="56dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="#FFF2F2F2"/>
+
+                <com.ycengine.yclibrary.widget.MultiViewPager
+                    android:id="@+id/mSigunguViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    app:matchChildWidth="@+id/vg_cover"/>
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/img_vcenter"/>
+
+            </RelativeLayout>
+
+            <!-- Category 1 ViewPager -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="56dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="#FFF2F2F2"/>
+
+                <com.ycengine.yclibrary.widget.MultiViewPager
+                    android:id="@+id/mCategory1ViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    app:matchChildWidth="@+id/vg_cover"/>
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/img_vcenter"/>
+
+            </RelativeLayout>
+
+            <!-- Category 2 ViewPager -->
+            <RelativeLayout
+                android:id="@+id/mCategory2Layout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="56dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="#FFF2F2F2"/>
+
+                <com.ycengine.yclibrary.widget.MultiViewPager
+                    android:id="@+id/mCategory2ViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    app:matchChildWidth="@+id/vg_cover"/>
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/img_vcenter"/>
+
+            </RelativeLayout>
+
+            <!-- Category 3 ViewPager -->
+            <RelativeLayout
+                android:id="@+id/mCategory3Layout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="56dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="#FFF2F2F2"/>
+
+                <com.ycengine.yclibrary.widget.MultiViewPager
+                    android:id="@+id/mCategory3ViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    app:matchChildWidth="@+id/vg_cover"/>
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/img_vcenter"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

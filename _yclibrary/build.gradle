@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.firebase:firebase-ads:10.0.1'
+    // com.ycengine.yclibrary.library.helper
+    // https://github.com/iPaulPro/Android-ItemTouchHelper-Demo
+    // com.ycengine.yclibrary.library.recyclerviewanim
+    // https://github.com/gabrielemariotti/RecyclerViewItemAnimators
+    // com.ycengine.yclibrary.library.recyclertreeview
+    // https://github.com/TellH/RecyclerTreeView
+}

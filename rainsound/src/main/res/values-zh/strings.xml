@@ -1,0 +1,47 @@
+<resources>
+
+    <string name="app_name">RainSound</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~6313571967</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/1061245283</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/9416255754</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/8444254743</string>
+
+    <string name="msg_timer">该应用程序将在%1$d小时%2$d分钟后自动关闭。</string>
+    <string name="msg_finish_by_timer">应用程序由计时器自动终止。</string>
+
+    <string name="core_bungalow_downpour">户外露台</string>
+    <string name="core_dripping_water">下雨</string>
+    <string name="core_hailstorm">雹暴</string>
+    <string name="core_inside_car">大雨中的窗户</string>
+    <string name="core_inside_motorhome">在车内</string>
+    <string name="core_light_rain_backyard">花园雨</string>
+    <string name="core_light_rain_night">晚上毛毛雨</string>
+    <string name="core_lodge_rainforest2">雨在树林里</string>
+    <string name="core_lodge_rainforest3">从艾菲尔铁塔</string>
+    <string name="core_morning_rain">胡同雨</string>
+    <string name="core_puddles">雨流</string>
+    <string name="core_rain_backyard">多雨的街道</string>
+    <string name="core_rain_city">来自车站的雨</string>
+    <string name="core_rain_forest">雨天徒步旅行</string>
+    <string name="core_rain_gutter">排水沟</string>
+    <string name="core_rain_park">一个公园的雨</string>
+    <string name="core_rain_skylight">多雨的仓库</string>
+    <string name="core_rain_street">一个水坑</string>
+    <string name="core_rain_tin_roof">屋顶毛毛雨</string>
+    <string name="core_rain_umbrella">伞雨</string>
+    <string name="core_rain_under_tree">树路径上方</string>
+    <string name="core_rain_window">有风的窗户</string>
+    <string name="core_rainy_night_crickets">蟋蟀和毛毛雨</string>
+    <string name="core_strong_thunderstorm">强烈的雷暴</string>
+    <string name="core_tent_rain">一个帐篷在雨中</string>
+    <string name="core_thunderstorm_countryside">遥远的雷暴</string>
+    <string name="core_thunderstorm">雷雨</string>
+    <string name="core_tropical_storm">大雨下的一条街</string>
+    <string name="core_wind_rain">暴雨</string>
+
+</resources>

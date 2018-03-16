@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- YCNOTE - manifest
+    * 매니패스트 파일은 어플리케이션에 대한 전반적인 정보를 담고 있는 파일로, 어플리케이션이 실행되기 전에 시스템이 알고 있어야 하는 파일이다.
+    * 이 매니페스트 파일 안에는 어플리케이션 컴포넌트(Activity, Service, intents, Content provider, Broadcast Receivers)에 대한 노드를 포함하고 있고
+    * Intent filter와 같이 permissions을 사용해 다른 컴포넌트와 어플리케이션이 어떻게 상호 작용을 하는지를 결정한다.
+-->
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ycengine.ontimealarm">
+
+    <!-- YCNOTE - supports-screens
+        * 애플리케이션이 지원하는 스크린 크기를 지정하는 옵션이다.(멀티해상도 관련)
+        * android:smallScreens			: 애플리케이션이 "small"보다 더 작은 스크린을 지원하는지 여부이다. API 레벨 4이상에서는 디폴트 값이 "ture"이고 다른 레벨에서는 "false"이다.
+        * android:normalScreens		: 애플리케이션이 "normal" 스크린을 지원하는지 여부이다. 디폴트 값은 "true"이다.
+        * android:largeScreens			: 애플리케이션이 "large"보다 더 큰 스크린을 지원하는지 여부이다. API 레벨 4이상에서는 디폴트 값이 "ture"이고 다른 레벨에서는 "false"이다.
+        * android:anyDensity			: 애플리케이션이 임의의 스크린 밀도를 수용할 수 있는 지에 대한 옵션이다. API레벨 4이상에서는 디폴트 값이 "true"이고 다른 레벨에서는 "false"이다.
+    -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true"/>
+
+    <!-- YCNOTE - uses-sdk
+        * Android Version이 아닌 API 레벨을 설정한다.
+        * android:targetSdkVersion	: 애플리케이션이 타겟으로 하고 있는 API 레벨을 지정하는 함수이다.
+        * android:minSdkVersion		: API의 최소레벨을 지정하는 함수로 Default값은 1이다. 시스템이 지정한 값보다 낮은 버전 이라면 시스템에 설치 되지 않는다.
+        * android:maxSdkVersion		: API의 최대레벨을 지정하는 함수이다. 시스템이 지정한 값보다 높은 버전이라면 시스템에 설치 되지 않는다.
+                                                    : 이 애트리뷰트를 사용하는 것을 권장하지 않는다.
+                                                    : 신규 버전의 안드로이드 플렛폼 배치가 차단되고 더 높은 API 레벨로 시스템이 업데이트 된 이후 사용자의 디바이스에서 maxSdkVersion이 시스템보다 낮은 값으로 설정된 애플리케이션이 제거된다.
+    -->
+    <!-- uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21" / -->
+
+    <!-- YCNOTE - permission
+        * uses-permission					: 어플리케이션의 필요한 기능의 권한을 정의해준다. 여기에 정의된 권한은 설치 과정 중 사용자에게 보여주고 권한부여 혹은 거절이 결정된다.
+        * permission						    : 컴포넌트를 사용하기 위한 권한 중에 안드로이드가 제공하는 권한 이외에 다른 권한이 필요할 때 정의한다.
+                                                    : 다른 어플리케이션이 이 컴포넌트를 사용하려면 자신의 매니페스트에 uses-permission 태그를 설정해 주거나<activity android:permission>속성에 권한을 추가해 주면 된다.
+        * uses-feature						: SDK버전을 선언하는 것과 비슷하게 해당기능을 지원하지 않는 디바이스 상에는 설치가 되지 않도록 하는 옵션이다.
+                                                    : 예를 들어 디바이스가 카메라를 지원하지 않으면 어플리케이션이 설치 되지 않는다. 애플리케이션이 특정 디바이스를 사용해야 한다면 이 옵션을 추가해야 한다.
+                                                    - android:glEsVersion	: 애플리케이션이 필요로 하는 GLES 버전이다.
+                                                    - android:name			: 애플리케이션이 필요로 하는 기능의 이름으로써 예로 "android.hardware.camera"와 같이 쓰이는데 이것은 애플리케이션이 카메라를 필요로 한다는 의미이다.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!--
+            4.4 이전버전에서는 파일을 읽어오려면 READ_EXTERNAL_STORAGE 권한이 꼭 필요 했었습니다.
+            권한이 없다면 getExternalStoragePublicDirectory()를 사용할 수 없었습니다.
+            하지만 4.4 킷캣이상부터는 권한이 필요 없이 getExternalFilesDir(String), getExternalCacheDir()를 통해 파일을 가져올 수 있습니다.
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <!-- YCNOTE - application
+        * hardwareAccelerated			: 해당 Activity 에 hardware-accelerated OpenGL rendering 을 적용할 것인지 확인(default : false)
+        * parentActivityName			: Android API 16+ 부터는 부모의 Activity를 지정할 수 있음
+        * largeHeap							: 보통 2배에서 4배까지 dalvik heap의 최대 크기가 늘어난다. (API 12부터 지원)
+        * exported							: 다른 애플리케이션의 컴포넌트에서 이 액티비티를 런치 할 수 있는지를 설정한다. "false"라면 이 액티비티는 같은 애플리케이션 혹은 같은 유저 ID를 가진 애플리케이션 컴포넌트만 런치 할 수 있다.
+                                                    : 디폴트는 액티비티가 인텐트 필터를 포함하는지에 달려있다. 필터가 없다면 디폴트 값이 "false"이고 필터가 있다면 "true"이다.
+    -->
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- YCNOTE - activity
+            * screenOrientation					    : 해당 Activity 에 가로 (landscape), 세로 (portrait), 모두 전환 (sensor : Device 설정과 무관하게 동작), 모두 전환 (unspecified : Device 설정에 따라 동작) 모드를 설정
+            * android:configChanges			        : Activity 가 스스로 handling 할 환경 변화 ( Config Changes ) 를 나열해 주는 곳입니다.
+                                                                : Runtime 시 환경 변화가 일어나면, 기본동작은 activity가 종료되고 재시작되는 것입니다.
+                                                                : 하지만, android:configChanges 에 값을 주면 환경변화가 되어도 activity가 restart 되는 것을 막을 수 있습니다.
+                                                                : 이 때 activity의 onConfigurationChanged() 함수가 대신 호출됩니다.
+                                                                : <주의사항>
+                                                                : 이 attribute 설정은 최후의 수단으로서 선택되어야 하며, 평소에는 이 값을 설정하는 것은 지양되어야 합니다.
+                                                                : 환경 변화에 따른 재시작을 어떻게 더 합리적으로 처리할지에  대한 더 자세한 정보는 Handling Runtim Changes 를 읽어보세요.
+            * android:clearTaskOnLaunch	        : Activity가 re-launch 될때, task에서 root activity 를 제외하고 위에 쌓인 모든 activity instance를 모두 제거한다. ( clear )
+                                                                : (따라서 이 attribute 는 해당 activity가 task 의 root 를 차지하는 경우에만 유효하죠 )
+                                                                : "true" 값일 때 root activity 만 남기고, 이 속성은 root activity 를 실행 시킬 때만 작용을 합니다.
+                                                                : default 값은 "false" 입니다. 그래서 보통 re-launch 하면 마지막으로 보여지던 activity 가 그대로 보여지는 것이죠.
+            * android:windowSoftInputMode	    : 소프트 키보드 상태 : 액티비티가 사용자 관심의 포커스를 받을 때 소프트 키보드가 보여지는지 여부를 설정한다.
+                                                                - stateUnspecified	    : 소프트 키보드 상태에 대해 시스템이 적절한상태를 선택하거나 테마 설정값을 따른다. 소프트 키보드의 디폴트 설정 값.
+                                                                - stateUnchanged	    : 소프트 키보드는 마지막 상태로 유지
+                                                                - stateHidden			    : 사용자 액티비티를 선택할 때 소프트 키보드는 숨겨짐
+                                                                - stateAlwaysHidden	: 액티비티의 메인 위도우가 입력 포커스를 가질 때 소프트 키보드는 항상 숨겨짐
+                                                                - stateVisible			    : 사용자가 액티비티 메인 위도우 앞으로 갈 때 소프트 키보드 보여짐
+                                                                - stateAlwaysVisible	: 사용자가 액티비티를 선택할 때 소프트 키보드 보여짐
+                                                                - adjustUnspecified	    : 스크롤 할 수 잇는 레이아웃 뷰들을 가지고 있다면 윈도우 크기 재조정. 메인 윈도우의 디폴트 값. 시스템이 Pan, Resize등 알아서 선택. 스크롤이 가능한가?, 레이아웃에 여백이 얼마나 있는지 등을 고려해서, 알아서 조정해준다.
+                                                                - adjustResize			: 스크린에 소프트 키보드 공간을 만들기 위해메인 윈도우 크기가 항상 재조정 됨. 뷰의 크기가 작아지죠, 하지만 모든 뷰가 보입니다.
+                                                                - adjustPan				: 소프트 키보드 공간을 만들기 위해 메인 윈도우 크기가 재조정 되지 않음. 포커스를 받은 뷰가 보이게 할려면, 스크롤 하여 이동하여야 합니다. 입력받는 뷰는 보이지만, 다른 뷰들이 가려지는 현상이 있습니다. 다른 뷰들이 보이려면, back키로 키보드를 닫아야 합니다.
+            * android:excludeFromRecents        : Home 키를 Long Press 할 때 나오는 Recent List 에 실행시키는 Activity 가 나오지 않게 하려면  값을 true 로 설정하면 됩니다.
+                                                                - Intent에 FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS flag 를 설정함으로서도 똑같은 효과를 볼 수 있다.
+        -->
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:parentActivityName=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustUnspecified"
+            android:launchMode="singleTask"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!--Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent"/>
+
+        <!-- YCNOTE - receiver
+            * android:enabled : 시스템이 알아서 Receiver를 실행할지 여부
+            * android:exported : 외부 어플리케이션에서 사용할지 여부
+        -->
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="com.ycengine.ontimealarm.ALARM_START"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <!-- 디바이스 시간 설정 변경 이벤트 -->
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- YCNOTE - service
+            * 각 서비스마다 <service>태그가 필요하다. 서비스는 백그라운드 오퍼레이션이나 다른 애플리케이션이 호출 할 수 있는 커뮤니케이션 API를 구현하기 위해 사용된다.
+            * android:icon				: 서비스 아이콘은 이곳에서 설정하던 <application>엘리먼트에서 설정하던 모든 서비스의 인텐트 필터에 대한 디폴트 아이콘이다.
+            * android:label				: 서비스 아이콘은 이곳에서 설정하던 <application>엘리먼트에서 설정하던 모든 서비스의 인텐트 필터에 대한 디폴트 라벨이다.
+            * android:name			    : 서비스를 구현하는 Service 서브클래스의 이름이다. com.example.project.RoomService 처럼 전체 클래스 이름이어야 한다. 하지만 .RoomService와 같이 단축형 이름이라면 <manifest>엘리먼트에 지정된 패키지 이름 끝에 붙여진다.
+            * android:permission		: 서비스를 런치하거나 바인드를 하기 위해 가져야 하는 퍼미션 이름이다. 만약 startsService(), bindService(), stopService()의 호출자가 이 퍼미션을 부여받지 않는다면 이 메쏘느는 작동하지 않으며 인턴트 오브젝트는 서비스에 전달되지 않는다.
+                                                : 이 퍼미션을 설정하지 않으면 <application>퍼미션이 적용되고 <application>퍼미션이 없다면 퍼미션이 적용되지 않는다.
+        -->
+        <service
+            android:name=".service.AlarmService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ycengine.ontimealarm.service.AlarmService.LAUNCHER"/>
+            </intent-filter>
+        </service>
+
+        <!-- YCNOTE - meta-data
+            * 데이터에 대한 정의나 설명이다. 컴포넌트 엘리먼트는 <meta-data> 서브엘리먼트를 포함할 수 있다. <meta-data>의 모든 값은 하나의 Bundle로 모아지고 PackageItemInfo.metaData 필드로써 컴포넌트에서 사용할 수 있다.
+            * android:name				: 아이템에 대한 고유한 이름이다. 예를들어 com.example.project.activity.fred처럼 Java 스타일 naming 규약을 사용해야 한다.
+            * android:resource		    : 리소스에 대한 레퍼런스 이다. ID는 Bundle.getInt() 메쏘드에 의해 meta-data Bundle로부터 얻을수 있다.
+            * android:value				: 아이템에 할당된 값이다. 아래는 값으로 할당 할수 있는 데이터 타입과 값을 얻기 위해 사용하는 메쏘드들이다.
+                                                - getString()	: 유니코드 문자를 위한 "\\n" 와 "\\uxxxxx" 같은 이스케이프(escape) 캐릭터에 더블 백슬래시(\\)를 사용하는 문자열 값
+                                                - getInt()		: "100"같은 정수(integer) 값
+                                                - getBoolean()	: "참(true)" 또는 "거짓(false)" 중 하나인 boolean 값
+                                                - getString()	: "#rgb", "#argb", "#rrggbb" 또는 "#aarrggbb" 형식의 컬러 값
+                                                - getFloat()		: "1.23" 같은 부동소수점 값
+        -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2082c684d973cf4223d5b0cbf891847e8ea01795" />
+
+    </application>
+
+</manifest>

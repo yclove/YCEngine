@@ -1,0 +1,15 @@
+<resources>
+
+    <!--
+        you need to use a Theme.AppCompat theme (or descendant) with this activity.
+        이 에러는 액티비티를 풀스크린 모드로 하거나 또는 타이틀바를 없앨 때 발생할 수 있다.
+        이 에러의 발생원인은 AppCompatActivity를 상속받은 MainActivity에서 NoTitleBar 옵션을 사용하기 때문인데.
+        AppCompatActivity는 안드로이드 서포트 라이브러리에서 사용되는 액션바의 특징을 사용하기 위한 액티비티로 이 액티비티를 사용하면서 동시에 NoTitleBar 옵션을 적용하면 위와 같은 에러가 발생한다.
+        동시에 풀스크린 모드를 적용할 때도 발생한다. 풀스크린모드와 같은 옵션을 사용하고자 할 경우 AppAompatAcitivity가 아닌 Activity 클래스를 상속받아 사용하도록 한다.
+    -->
+    <style name="AppThemes" parent="android:Theme.Material.Light.NoActionBar"/>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/appBgColor</item>
+    </style>
+
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+
+    <dimen name="app_text_size">12dp</dimen>
+
+    <!-- Floating Action Menu -->
+    <dimen name="fab_size_normal">45dp</dimen>
+    <dimen name="fab_size_mini">37dp</dimen>
+    <dimen name="labels_text_size">14dp</dimen>
+
+</resources>

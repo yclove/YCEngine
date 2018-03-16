@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="icon_color_active_dark">#ffffffff</color> <!--100% white-->
+    <color name="icon_color_active_light">#8a000000</color> <!--54% black-->
+    <!-- TODO: This value is from the Icons page. The Colors page lists 50% white for "Icons and other elements". -->
+    <color name="icon_color_inactive_dark">#4dffffff</color> <!--30% white-->
+    <!-- TODO: This value is from the Icons page. The Colors page lists 38% black for "Icons and other elements". -->
+    <color name="icon_color_inactive_light">#42000000</color> <!--26% black-->
+
+</resources>

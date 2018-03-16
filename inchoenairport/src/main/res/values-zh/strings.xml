@@ -1,0 +1,51 @@
+<resources>
+
+    <string name="app_name">实时，仁川机场</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~9552446579</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/5936635198</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/3042878549</string>
+    <!-- 네이티브 -->
+    <string name="banner_ad_native_id">ca-app-pub-4803302946270084/6023021835</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/2072641297</string>
+
+    <string name="api_calling_msg">检索数据。</string>
+
+    <string name="realtime_gate">实时出发站</string>
+    <string name="realtime_parking_lot">实时停车</string>
+
+    <string name="airport_info_title">仁川机场出境大厅拥挤度</string>
+    <string name="airport_info_latest_update">최종업데이트 %1$s</string>
+    <string name="airport_info_total_title">实时等待人员</string>
+    <string name="airport_info_passenger_per_time">各时间段预测乘客</string>
+    <string name="airport_info_today">今天</string>
+    <string name="airport_info_tomorrow">明天</string>
+    <string name="airport_info_at_time">%1$s/%2$s %3$s点</string>
+    <string name="airport_info_wait_passenger">%1$s名</string>
+    <string name="airport_info_total_wait_passenger">总 %1$s名</string>
+    <string name="airport_info_wait_level_3">非常拥挤</string>
+    <string name="airport_info_wait_level_2">拥挤</string>
+    <string name="airport_info_wait_level_1">普通</string>
+    <string name="airport_info_wait_level_0">顺畅</string>
+    <string name="airport_info_wait_level_9">终止操作</string>
+    <string name="airport_info_gate">时间段</string>
+    <string name="airport_info_gate_5">5号</string>
+    <string name="airport_info_gate_4">4号</string>
+    <string name="airport_info_gate_3">3号</string>
+    <string name="airport_info_gate_2">2号</string>
+    <string name="airport_info_update">更新成功\n%1$s</string>
+    <string name="airport_info_update_not_yet">已被更新为最新信息。</string>
+
+    <string name="parking_lot_info_title">仁川国际机场实时停车场</string>
+    <string name="passenger_terminal">客运码头</string>
+    <string name="parking_lot_info_short">短期停车场</string>
+    <string name="parking_lot_info_long">长期停车场</string>
+    <string name="parking_lot_info_tower">停车塔</string>
+    <string name="parking_lot_info_full">充分</string>
+    <string name="parking_lot_info_usable">%1$s可用</string>
+
+</resources>

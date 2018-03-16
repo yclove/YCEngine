@@ -1,0 +1,47 @@
+<resources>
+
+    <string name="app_name">RainSound</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~6313571967</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/1061245283</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/9416255754</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/8444254743</string>
+
+    <string name="msg_timer">アプリは%1$d時間%2$d分後に自動的にシャットダウンします。</string>
+    <string name="msg_finish_by_timer">アプリはタイマーで自動終了します。</string>
+
+    <string name="core_bungalow_downpour">屋外テラス</string>
+    <string name="core_dripping_water">降雨</string>
+    <string name="core_hailstorm">うなり声</string>
+    <string name="core_inside_car">大雨の窓</string>
+    <string name="core_inside_motorhome">車の中で</string>
+    <string name="core_light_rain_backyard">庭の雨</string>
+    <string name="core_light_rain_night">夜の霧雨</string>
+    <string name="core_lodge_rainforest2">森の雨</string>
+    <string name="core_lodge_rainforest3">エッフェル塔から</string>
+    <string name="core_morning_rain">路地の雨</string>
+    <string name="core_puddles">雨の多い川</string>
+    <string name="core_rain_backyard">雨の多い通り</string>
+    <string name="core_rain_city">駅からの雨</string>
+    <string name="core_rain_forest">雨の多いハイキングコース</string>
+    <string name="core_rain_gutter">ガッター</string>
+    <string name="core_rain_park">公園の雨</string>
+    <string name="core_rain_skylight">雨の倉庫</string>
+    <string name="core_rain_street">水たまり</string>
+    <string name="core_rain_tin_roof">屋根の霧雨</string>
+    <string name="core_rain_umbrella">傘の雨</string>
+    <string name="core_rain_under_tree">ツリーパスの上</string>
+    <string name="core_rain_window">風の強い窓</string>
+    <string name="core_rainy_night_crickets">クリケットと霧雨</string>
+    <string name="core_strong_thunderstorm">強い雷雨</string>
+    <string name="core_tent_rain">雨の中のテント</string>
+    <string name="core_thunderstorm_countryside">遠隔雷雨</string>
+    <string name="core_thunderstorm">雷雨</string>
+    <string name="core_tropical_storm">雨の多い街</string>
+    <string name="core_wind_rain">暴風雨</string>
+
+</resources>

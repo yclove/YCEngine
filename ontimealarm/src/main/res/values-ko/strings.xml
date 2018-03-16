@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">정각알리미</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~2150652011</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/3158102613</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/6954587839</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/3530471853</string>
+
+    <string name="title_setting">알람설정</string>
+
+    <string name="hint_noti_title">알람 이름을 입력해 주세요.</string>
+
+    <string name="msg_choice_noti_type">알람음 또는 진동을 선택해주세요.</string>
+    <string name="msg_choice_noti_hour">1개 이상의 알람시간을 선택해주세요.</string>
+    <string name="msg_choice_noti_day">1개 이상의 요일을 선택해주세요.</string>
+    <string name="msg_delete_noti_confirm">해당 알람을 삭제하시겠습니까 ?</string>
+
+    <string name="repeat_day">요일반복</string>
+    <string name="alarm_setting_time">알람 시간 설정</string>
+    <string name="status_bar_notify">상태바에 알림</string>
+    <string name="sound">알람음</string>
+    <string name="vibrate">진동</string>
+    <string name="noti_name">알람 이름</string>
+
+    <string name="alarm_set_for">%1$s 후 알람이 울립니다.</string>
+
+</resources>

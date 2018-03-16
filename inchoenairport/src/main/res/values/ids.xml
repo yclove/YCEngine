@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Floating Action Menu -->
+    <item name="fab_label" type="id"/>
+
+</resources>

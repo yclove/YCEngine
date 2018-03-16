@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">莫尔斯闪电</string>
+
+    <!-- 앱 -->
+    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~1627146094</string>
+    <!-- 배너 -->
+    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/9928130332</string>
+    <!-- 전면 -->
+    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/7301966999</string>
+    <!-- 네이티브 : 종료 -->
+    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/5042597179</string>
+
+    <string name="menu_light">手电筒</string>
+    <string name="menu_flicker">闪烁</string>
+    <string name="menu_morse">莫尔斯</string>
+
+    <string name="morsecodeinfo">请输入句子</string>
+    <string name="flash_auto_launch">运行应用程序时打开自动闪光</string>
+    <string name="repeat">重复</string>
+
+</resources>

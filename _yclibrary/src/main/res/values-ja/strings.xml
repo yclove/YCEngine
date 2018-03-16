@@ -1,0 +1,103 @@
+<resources>
+
+    <string name="app_name">YCLibrary</string>
+    <string name="app_version">バージョン : %1$s</string>
+
+    <string name="permission_rationale_message_storage">ストレージスペースへのアクセス\n\n買い物リスト設定のための保管スペースを許可してください。許可を与えないと、アプリを使用できなくなります。\n\nこれは次のステップで行うことができます。</string>
+    <string name="permission_rationale_message_camera">カメラへのアクセスガイド\n\nフラッシュアクティベーションのためのカメラ許可を許可してください。許可を与えないと、アプリを使用できなくなります。\n\nこれは次のステップで行うことができます。</string>
+    <string name="permission_denied_message">[設定] > [権限]で権限を許容することができます。</string>
+
+    <string name="app_finish">前に戻るボタンをもう一度クリックすると終了します.</string>
+    <string name="force_update_msg">もっと良いサービス楽しむためにアプリを更新してください</string>
+    <string name="force_positive_msg">更新</string>
+    <string name="force_negative_msg">終了</string>
+    <string name="choice_update_msg">アプリを更新して様々サービスをご利用ください</string>
+    <string name="non_force_negative_msg">今はしない</string>
+
+    <string name="dialog_back_message_end">アプリを終了しますか?</string>
+    <string name="dialog_alert_yes">確認</string>
+    <string name="dialog_alert_no">キャンセル</string>
+    <string name="dialog_alert_see">見る</string>
+
+    <string name="preview">プレビュー</string>
+    <string name="setting">設定</string>
+    <string name="select">選択する</string>
+    <string name="timer">タイマー</string>
+    <string name="timer_format">%1$s´%2$s˝</string>
+    <string name="start">開始</string>
+    <string name="hour">時</string>
+    <string name="minute">分</string>
+    <string name="save">セーブ</string>
+
+    <string name="monday">月</string>
+    <string name="tuesday">火</string>
+    <string name="wednesday">水</string>
+    <string name="thursday">木</string>
+    <string name="friday">金</string>
+    <string name="saturday">土</string>
+    <string name="sunday">日</string>
+
+    <string name="hour_00">00 時</string>
+    <string name="hour_01">01 時</string>
+    <string name="hour_02">02 時</string>
+    <string name="hour_03">03 時</string>
+    <string name="hour_04">04 時</string>
+    <string name="hour_05">05 時</string>
+    <string name="hour_06">06 時</string>
+    <string name="hour_07">07 時</string>
+    <string name="hour_08">08 時</string>
+    <string name="hour_09">09 時</string>
+    <string name="hour_10">10 時</string>
+    <string name="hour_11">11 時</string>
+    <string name="hour_12">12 時</string>
+    <string name="hour_13">13 時</string>
+    <string name="hour_14">14 時</string>
+    <string name="hour_15">15 時</string>
+    <string name="hour_16">16 時</string>
+    <string name="hour_17">17 時</string>
+    <string name="hour_18">18 時</string>
+    <string name="hour_19">19 時</string>
+    <string name="hour_20">20 時</string>
+    <string name="hour_21">21 時</string>
+    <string name="hour_22">22 時</string>
+    <string name="hour_23">23 時</string>
+
+    <!-- For DurationUtil -->
+    <string name="day_hour_and_minute">1日1時間1分</string>
+    <string name="days_hour_and_minute">%1$d日1時間1分</string>
+    <string name="days_hours_and_minute">%1$d日%2$d時間1分</string>
+    <string name="days_hour_and_minutes">%1$d日1時間%3$d分</string>
+    <string name="days_hours_and_minutes">%1$d日%2$d時間%3$d分</string>
+    <string name="day_hours_and_minute">1日%2$d時間1分</string>
+    <string name="day_hours_and_minutes">1日%2$d時間%3$d分</string>
+    <string name="day_hour_and_minutes">1日1時間%3$d分</string>
+    <string name="day_and_hour">1日1時間</string>
+    <string name="days_and_hour">%1$d日1時間</string>
+    <string name="day_and_hours">1日%2$d時間</string>
+    <string name="days_and_hours">%1$d日%2$d時間</string>
+    <string name="day_and_minute">1日1分</string>
+    <string name="days_and_minute">%1$d日1分</string>
+    <string name="day_and_minutes">1日%3$d分</string>
+    <string name="days_and_minutes">%1$d日%3$d分</string>
+    <string name="hour_and_minute">1時間1分</string>
+    <string name="hour_and_minutes">1時間%3$d分</string>
+    <string name="hours_and_minute">%2$d時間1分</string>
+    <string name="hours_and_minutes">%2$d時間%3$d分</string>
+    <string name="a_day">1日</string>
+    <string name="days">%1$d日</string>
+    <string name="a_hour">1時間</string>
+    <string name="hours">%2$d時間</string>
+    <string name="a_minute">1分</string>
+    <string name="minutes">%3$d分</string>
+    <string name="less_than_one_minute">1分未満</string>
+
+    <string name="abbrev_days_hours_and_minutes">%1$d日%2$d時間%3$d分</string>
+    <string name="abbrev_days_and_hours">%1$d日%2$d時間</string>
+    <string name="abbrev_days_and_minutes">%1$d日%3$d分</string>
+    <string name="abbrev_hours_and_minutes">%2$d時間%3$d分</string>
+    <string name="abbrev_days">%1$d日</string>
+    <string name="abbrev_hours">%2$d時間</string>
+    <string name="abbrev_minutes">%3$d分</string>
+    <string name="abbrev_less_than_one_minute">&lt;1分</string>
+
+</resources>

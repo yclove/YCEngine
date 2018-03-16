@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+
+    <item name="position" type="id"/>
+    <item name="ringtone" type="id"/>
+    <item name="tag_data" type="id"/>
+    <item name="tag_dcre_plac_id" type="id"/>
+    <item name="tag_dcre_target_type" type="id"/>
+    <item name="tag_dcre_resn_code" type="id"/>
+
+</resources>
