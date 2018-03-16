@@ -54,6 +54,9 @@ google-services.json
 fabric.properties
 config.txt
 
+# Key files
+keys_strings.xml
+
 # Freeline
 freeline.py
 freeline/
