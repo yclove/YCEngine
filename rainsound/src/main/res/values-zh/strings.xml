@@ -2,15 +2,6 @@
 
     <string name="app_name">RainSound</string>
 
-    <!-- 앱 -->
-    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~6313571967</string>
-    <!-- 배너 -->
-    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/1061245283</string>
-    <!-- 전면 -->
-    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/9416255754</string>
-    <!-- 네이티브 : 종료 -->
-    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/8444254743</string>
-
     <string name="msg_timer">该应用程序将在%1$d小时%2$d分钟后自动关闭。</string>
     <string name="msg_finish_by_timer">应用程序由计时器自动终止。</string>
 

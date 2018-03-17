@@ -2,15 +2,6 @@
 
     <string name="app_name">醒来</string>
 
-    <!-- 앱 -->
-    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~5419927158</string>
-    <!-- 배너 -->
-    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/3444500508</string>
-    <!-- 전면 -->
-    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/2103498670</string>
-    <!-- 네이티브 : 종료 -->
-    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/7599846868</string>
-
     <string name="title_setting">报警设置</string>
 
     <string name="hint_noti_title">请输入警报名称。</string>

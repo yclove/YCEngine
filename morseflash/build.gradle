@@ -36,7 +36,6 @@ android {
         targetSdkVersion 25
         versionCode 12
         versionName "0.0.12"
-        manifestPlaceholders = [ api_key_crashlytics:"2082c684d973cf4223d5b0cbf891847e8ea01795"]
     }
     buildTypes {
         release {

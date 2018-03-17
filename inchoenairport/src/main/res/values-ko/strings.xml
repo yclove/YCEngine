@@ -2,17 +2,6 @@
 
     <string name="app_name">실시간 인천공항</string>
 
-    <!-- 앱 -->
-    <string name="banner_ad_app_id">ca-app-pub-4803302946270084~9552446579</string>
-    <!-- 배너 -->
-    <string name="banner_ad_unit_id">ca-app-pub-4803302946270084/5936635198</string>
-    <!-- 전면 -->
-    <string name="banner_ad_fullscreen_id">ca-app-pub-4803302946270084/3042878549</string>
-    <!-- 네이티브 -->
-    <string name="banner_ad_native_id">ca-app-pub-4803302946270084/6023021835</string>
-    <!-- 네이티브 : 종료 -->
-    <string name="banner_ad_native_finish_id">ca-app-pub-4803302946270084/2072641297</string>
-
     <string name="api_calling_msg">조회중입니다.</string>
 
     <string name="realtime_gate">실시간 출국장</string>
